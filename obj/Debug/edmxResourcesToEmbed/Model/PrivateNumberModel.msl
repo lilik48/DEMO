@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="privateNumberModelStoreContainer" CdmEntityContainer="privateNumberEntities">
+    <EntitySetMapping Name="t_privateno">
+      <EntityTypeMapping TypeName="privateNumberModel.t_privateno">
+        <MappingFragment StoreEntitySet="t_privateno">
+          <ScalarProperty Name="privatenokey" ColumnName="privatenokey" />
+          <ScalarProperty Name="privateno" ColumnName="privateno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

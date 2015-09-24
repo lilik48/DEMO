@@ -1,0 +1,112 @@
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\MyNo.exe.config
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\MyNo.exe
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\MyNo.pdb
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\MyNo.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\EntityFramework.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\EntityFramework.SqlServer.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\GrapeCity.ActiveReports.Document.v7.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\GrapeCity.ActiveReports.Export.Pdf.v7.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\GrapeCity.ActiveReports.v7.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\GrapeCity.ActiveReports.Viewer.Win.v7.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\Mono.Security.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\Npgsql.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\Npgsql.EntityFramework.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\NPOI.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\NPOI.OOXML.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\NPOI.OpenXml4Net.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\System.Transactions.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\EntityFramework.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\EntityFramework.SqlServer.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\GrapeCity.ActiveReports.Document.v7.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\GrapeCity.ActiveReports.Export.Pdf.v7.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\GrapeCity.ActiveReports.v7.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\GrapeCity.ActiveReports.Viewer.Win.v7.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\Npgsql.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\Npgsql.EntityFramework.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\NPOI.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\NPOI.OOXML.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\NPOI.OpenXml4Net.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\ja\GrapeCity.ActiveReports.Document.v7.resources.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\ja\GrapeCity.ActiveReports.Export.Pdf.v7.resources.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\ja\GrapeCity.ActiveReports.v7.resources.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\ja\GrapeCity.ActiveReports.Viewer.Win.v7.resources.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\de\Npgsql.resources.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\es\Npgsql.resources.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\fi\Npgsql.resources.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\fr\Npgsql.resources.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\ja\Npgsql.resources.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\bin\Debug\zh-CN\Npgsql.resources.dll
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmLoading.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIDTR100.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIDTR200.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIIMT100.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIIMT110.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIIMT120.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIIMT200.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIIMT210.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIKTO100.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIKTR100.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIKTR200.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIKTR300.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIKTR400.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIMNU100.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIMTN100.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIMTN200.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIMTN300.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIMTN410.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUILGN110.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUILGN100.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIMTN400.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.frmMNUIMTN500.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.Resources.resources
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.vbproj.GenerateResource.Cache
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.exe.licenses
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.exe
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.xml
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.pdb
+E:\Project\SSCMYNO\trunk\12_Sourcecode\trunk\MyNo\MyNo\obj\Debug\MyNo.vbprojResolveAssemblyReference.cache
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\bin\Debug\MyNo.exe.config
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\bin\Debug\MyNo.exe
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\bin\Debug\MyNo.pdb
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\bin\Debug\MyNo.xml
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\bin\Debug\Npgsql.dll
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\bin\Debug\System.Transactions.dll
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.frmLoading.resources
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.frmMNUIDTR100.resources
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.frmMNUIDTR200.resources
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.frmMNUIIMT100.resources
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.frmMNUIMNU100.resources
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.frmMNUIMTN410.resources
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.frmMNUILGN110.resources
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.frmMNUILGN100.resources
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.frmMNUIMTN400.resources
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.Resources.resources
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.vbproj.GenerateResource.Cache
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.exe.licenses
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.exe
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.xml
+C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.pdb
+E:\Project\Github\Demo\DEMO\bin\Debug\MyNo.exe.config
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.exe
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.xml
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.pdb
+E:\Project\Github\Demo\DEMO\bin\Debug\MyNo.exe
+E:\Project\Github\Demo\DEMO\bin\Debug\MyNo.pdb
+E:\Project\Github\Demo\DEMO\bin\Debug\MyNo.xml
+E:\Project\Github\Demo\DEMO\bin\Debug\Npgsql.dll
+E:\Project\Github\Demo\DEMO\bin\Debug\System.Transactions.dll
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.vbprojResolveAssemblyReference.cache
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.frmLoading.resources
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.frmMNUIDTR100.resources
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.frmMNUIDTR200.resources
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.frmMNUIIMT100.resources
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.frmMNUIMNU100.resources
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.frmMNUIMTN410.resources
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.frmMNUILGN110.resources
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.frmMNUILGN100.resources
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.frmMNUIMTN400.resources
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.Resources.resources
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.vbproj.GenerateResource.Cache
+E:\Project\Github\Demo\DEMO\obj\Debug\MyNo.exe.licenses
