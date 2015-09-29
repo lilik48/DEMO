@@ -27,6 +27,7 @@ Partial Class frmMNUIMTN400
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMNUIMTN400))
         Me.cboAuthorityCD = New MyNo.CustomCombobox()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.txtUserCD = New System.Windows.Forms.TextBox()
@@ -36,7 +37,6 @@ Partial Class frmMNUIMTN400
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.btnAddNew = New System.Windows.Forms.Button()
-        Me.btnClose = New System.Windows.Forms.Button()
         Me.dgvUser = New MyNo.CustomDataGridView()
         Me.UserCD = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -149,18 +149,6 @@ Partial Class frmMNUIMTN400
         Me.btnAddNew.TabIndex = 7
         Me.btnAddNew.Text = "Đăng ký người dùng mới(&M)"
         Me.btnAddNew.UseVisualStyleBackColor = True
-        '
-        'btnClose
-        '
-        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnClose.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClose.Location = New System.Drawing.Point(783, 460)
-        Me.btnClose.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(150, 35)
-        Me.btnClose.TabIndex = 8
-        Me.btnClose.Text = "Đóng(&D)"
-        Me.btnClose.UseVisualStyleBackColor = True
         '
         'dgvUser
         '
@@ -275,9 +263,9 @@ Partial Class frmMNUIMTN400
         Me.ClientSize = New System.Drawing.Size(943, 505)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.dgvUser)
-        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnAddNew)
         Me.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.Name = "frmMNUIMTN400"
@@ -299,7 +287,6 @@ Partial Class frmMNUIMTN400
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents btnAddNew As System.Windows.Forms.Button
-    Friend WithEvents btnClose As System.Windows.Forms.Button
     Friend WithEvents dgvUser As MyNo.CustomDataGridView
     Friend WithEvents cboAuthorityCD As MyNo.CustomCombobox
     Friend WithEvents UserCD As System.Windows.Forms.DataGridViewTextBoxColumn

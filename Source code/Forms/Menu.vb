@@ -124,127 +124,127 @@ Public Class Menu
         'Get Name in menu treeview
         If e.Node IsNot Nothing Then
             Select Case (e.Node.Name)
-                'Case UC_PROJECT
-                '    uc = New frmProject()
-                'Case UC_MITUMORI1
-                '    uc = New frmMitumori1(False)
-                'Case UC_JYUTYU
-                '    uc = New frmJyutyuNew(False)
-                'Case UC_JYUTYU_SALE
-                '    uc = New frmJyutyuNewSale(False)
-                'Case UC_IMPORTED_STATUS
-                '    uc = New frmImportedStatus()
-                'Case UC_NOHINSHIJIGAMEN
-                '    uc = New frmNohinShijiGamen()
-                'Case UC_STATUS
-                '    uc = New frmStatusManagement()
-                'Case UC_NYUUSYUKKO
-                '    uc = New frmNyuusyukko()
-                'Case UC_SEIKYU
-                '    uc = New frmSeikyu()
-                'Case UC_NYUKIN
-                '    uc = New frmNyukin()
-                'Case UC_SIHARAI
-                '    uc = New frmSiharai()
-                'Case UC_SMANAGEMENT
-                '    uc = New frmSManagement()
-                'Case UC_PDSAGYOIRAI
-                '    uc = New frmPdSagyoIrai()
-                'Case UC_GETUJIKOUSIN
-                '    uc = New frmGetujiKousin()
-                '    ' -------------------------- 帳票 ------------------------------------
-                'Case UC_PDSAGYOIRAIPRINT
-                '    uc = New frmPdSagyoIraiPrint()
-                '    uc.ShowDialog()
-                '    Return
-                'Case UC_MITUMORIPRINT
-                '    uc = New frmMitumoriPrint(True, False)
-                '    uc.ShowDialog()
-                '    Return
-                'Case UC_HOUKOKUPRINT
-                '    uc = New frmHoukokuPrint()
-                '    uc.ShowDialog()
-                '    Return
-                'Case UC_TYUMONPRINT
-                '    uc = New frmTyumonPrint()
-                '    uc.ShowDialog()
-                '    Return
-                'Case UC_PROJECTSONEKIPRINT
-                '    uc = New frmProjectSonekiPrint()
-                '    uc.ShowDialog()
-                '    Return
-                'Case UC_SALEREPORT
-                '    uc = New frmSaleReport()
-                '    uc.ShowDialog()
-                '    Return
-                'Case UC_REPORTANALYZE
-                '    uc = New frmAnalyzeReport
-                '    uc.ShowDialog()
-                '    Return
-                'Case UC_SEIKYUPRINT
-                '    If KENGEN_LVL <> 4 Then
-                '        uc = New frmSeikyuKakuninNew()
-                '        uc.ShowDialog()
-                '        Return
-                '    End If
-                'Case UC_SEIKYUITIRANPRINT
-                '    uc = New frmSeikyuItiranPrint()
-                '    uc.ShowDialog()
-                '    Return
+                Case "ucNhanVien"
+                    uc = New frmMNUIMTN400()
+                    'Case UC_MITUMORI1
+                    '    uc = New frmMitumori1(False)
+                    'Case UC_JYUTYU
+                    '    uc = New frmJyutyuNew(False)
+                    'Case UC_JYUTYU_SALE
+                    '    uc = New frmJyutyuNewSale(False)
+                    'Case UC_IMPORTED_STATUS
+                    '    uc = New frmImportedStatus()
+                    'Case UC_NOHINSHIJIGAMEN
+                    '    uc = New frmNohinShijiGamen()
+                    'Case UC_STATUS
+                    '    uc = New frmStatusManagement()
+                    'Case UC_NYUUSYUKKO
+                    '    uc = New frmNyuusyukko()
+                    'Case UC_SEIKYU
+                    '    uc = New frmSeikyu()
+                    'Case UC_NYUKIN
+                    '    uc = New frmNyukin()
+                    'Case UC_SIHARAI
+                    '    uc = New frmSiharai()
+                    'Case UC_SMANAGEMENT
+                    '    uc = New frmSManagement()
+                    'Case UC_PDSAGYOIRAI
+                    '    uc = New frmPdSagyoIrai()
+                    'Case UC_GETUJIKOUSIN
+                    '    uc = New frmGetujiKousin()
+                    '    ' -------------------------- 帳票 ------------------------------------
+                    'Case UC_PDSAGYOIRAIPRINT
+                    '    uc = New frmPdSagyoIraiPrint()
+                    '    uc.ShowDialog()
+                    '    Return
+                    'Case UC_MITUMORIPRINT
+                    '    uc = New frmMitumoriPrint(True, False)
+                    '    uc.ShowDialog()
+                    '    Return
+                    'Case UC_HOUKOKUPRINT
+                    '    uc = New frmHoukokuPrint()
+                    '    uc.ShowDialog()
+                    '    Return
+                    'Case UC_TYUMONPRINT
+                    '    uc = New frmTyumonPrint()
+                    '    uc.ShowDialog()
+                    '    Return
+                    'Case UC_PROJECTSONEKIPRINT
+                    '    uc = New frmProjectSonekiPrint()
+                    '    uc.ShowDialog()
+                    '    Return
+                    'Case UC_SALEREPORT
+                    '    uc = New frmSaleReport()
+                    '    uc.ShowDialog()
+                    '    Return
+                    'Case UC_REPORTANALYZE
+                    '    uc = New frmAnalyzeReport
+                    '    uc.ShowDialog()
+                    '    Return
+                    'Case UC_SEIKYUPRINT
+                    '    If KENGEN_LVL <> 4 Then
+                    '        uc = New frmSeikyuKakuninNew()
+                    '        uc.ShowDialog()
+                    '        Return
+                    '    End If
+                    'Case UC_SEIKYUITIRANPRINT
+                    '    uc = New frmSeikyuItiranPrint()
+                    '    uc.ShowDialog()
+                    '    Return
 
-                'Case UC_NOHINSHIJIPRINT
-                '    uc = New frmNohinShijiPrint()
-                '    uc.ShowDialog()
-                '    Return
-                'Case "ucExport"
-                '    uc = New frmMToolExportExcel()
+                    'Case UC_NOHINSHIJIPRINT
+                    '    uc = New frmNohinShijiPrint()
+                    '    uc.ShowDialog()
+                    '    Return
+                    'Case "ucExport"
+                    '    uc = New frmMToolExportExcel()
 
-                'Case UC_MMEISYO
-                '    uc = New frmMMeisyo()
-                'Case UC_MTANTOU
-                '    uc = New frmMTantou()
-                'Case UC_MSYOHIN
-                '    uc = New frmMSyohin()
-                'Case UC_MTOKUISAKI
-                '    uc = New frmMTokuisaki()
-                'Case UC_MSIIRESAKI
-                '    uc = New frmMSiiresaki()
-                'Case UC_MSYSTEM
-                '    uc = New frmMsystem()
-                'Case UC_MFILEMANAGEMENT
-                '    uc = New frmMFileManagement()
-                'Case UC_MIMPORTEXPENDITURE
-                '    uc = New frmMImportExpenditure()
-                'Case UC_MSHOHINBUNRUI
-                '    uc = New frmMShohinBunrui()
-                'Case UC_SYUKKOIRAI
-                '    uc = New frmSyukkoIrai()
-                'Case UC_IMPORTBUSINESS
-                '    OpenFile(directoryAccess + UC_IMPORTBUSINESS + ".accdb")
-                'Case UC_BUYINGANDSELLING
-                '    OpenFile(directoryAccess + UC_BUYINGANDSELLING + ".accdb")
-                'Case UC_TRADINGPROFITANDLOSS
-                '    OpenFile(directoryAccess + UC_TRADINGPROFITANDLOSS + ".accdb")
-                'Case UC_WORKMANAGEMENT
-                '    OpenFile(directoryAccess + UC_WORKMANAGEMENT + ".accdb")
-                'Case UC_TIMEANDATTENDANCEINPUT
-                '    OpenFile(directoryAccess + "出退勤入力 画面入力.accdb")
-                'Case UC_ATTENDANCEMANAGEMENT
-                '    OpenFile(directoryAccess + UC_ATTENDANCEMANAGEMENT + ".accdb")
-                'Case UC_JOBANALYSIS
-                '    OpenFile(directoryAccess + UC_JOBANALYSIS + ".accdb")
-                'Case UC_BUSINESSMANAGEMENT
-                '    OpenFile(directoryAccess + UC_BUSINESSMANAGEMENT + ".accdb")
-                '    'Case UC_WORKMANAGEMENT
-                '    'OpenFile(directoryAccess + UC_WORKMANAGEMENT + ".accdb")
-                'Case UC_BALANCESHEETMANAGEMENT
-                '    OpenFile(directoryAccess + UC_BALANCESHEETMANAGEMENT + ".accdb")
-                'Case UC_MASTERMANAGEMENT
-                '    OpenFile(directoryAccess + UC_MASTERMANAGEMENT + ".accdb")
-                'Case Else
-                '    If e.Node.Level > 0 Then
-                '        MessageBox.Show(MESAGE, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                '    End If
+                    'Case UC_MMEISYO
+                    '    uc = New frmMMeisyo()
+                    'Case UC_MTANTOU
+                    '    uc = New frmMTantou()
+                    'Case UC_MSYOHIN
+                    '    uc = New frmMSyohin()
+                    'Case UC_MTOKUISAKI
+                    '    uc = New frmMTokuisaki()
+                    'Case UC_MSIIRESAKI
+                    '    uc = New frmMSiiresaki()
+                    'Case UC_MSYSTEM
+                    '    uc = New frmMsystem()
+                    'Case UC_MFILEMANAGEMENT
+                    '    uc = New frmMFileManagement()
+                    'Case UC_MIMPORTEXPENDITURE
+                    '    uc = New frmMImportExpenditure()
+                    'Case UC_MSHOHINBUNRUI
+                    '    uc = New frmMShohinBunrui()
+                    'Case UC_SYUKKOIRAI
+                    '    uc = New frmSyukkoIrai()
+                    'Case UC_IMPORTBUSINESS
+                    '    OpenFile(directoryAccess + UC_IMPORTBUSINESS + ".accdb")
+                    'Case UC_BUYINGANDSELLING
+                    '    OpenFile(directoryAccess + UC_BUYINGANDSELLING + ".accdb")
+                    'Case UC_TRADINGPROFITANDLOSS
+                    '    OpenFile(directoryAccess + UC_TRADINGPROFITANDLOSS + ".accdb")
+                    'Case UC_WORKMANAGEMENT
+                    '    OpenFile(directoryAccess + UC_WORKMANAGEMENT + ".accdb")
+                    'Case UC_TIMEANDATTENDANCEINPUT
+                    '    OpenFile(directoryAccess + "出退勤入力 画面入力.accdb")
+                    'Case UC_ATTENDANCEMANAGEMENT
+                    '    OpenFile(directoryAccess + UC_ATTENDANCEMANAGEMENT + ".accdb")
+                    'Case UC_JOBANALYSIS
+                    '    OpenFile(directoryAccess + UC_JOBANALYSIS + ".accdb")
+                    'Case UC_BUSINESSMANAGEMENT
+                    '    OpenFile(directoryAccess + UC_BUSINESSMANAGEMENT + ".accdb")
+                    '    'Case UC_WORKMANAGEMENT
+                    '    'OpenFile(directoryAccess + UC_WORKMANAGEMENT + ".accdb")
+                    'Case UC_BALANCESHEETMANAGEMENT
+                    '    OpenFile(directoryAccess + UC_BALANCESHEETMANAGEMENT + ".accdb")
+                    'Case UC_MASTERMANAGEMENT
+                    '    OpenFile(directoryAccess + UC_MASTERMANAGEMENT + ".accdb")
+                    'Case Else
+                    '    If e.Node.Level > 0 Then
+                    '        MessageBox.Show(MESAGE, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    '    End If
             End Select
             If uc Is Nothing Then Return
             uc.TopLevel = False

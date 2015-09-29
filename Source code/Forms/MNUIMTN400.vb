@@ -140,7 +140,7 @@ Public Class frmMNUIMTN400
         End Try
     End Sub
 
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub btnClose_Click(sender As Object, e As EventArgs)
         Try
             Me.Close()
         Catch ex As Exception

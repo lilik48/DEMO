@@ -137,8 +137,7 @@ Public Class frmMNUIMTN410
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Try
-            Me.Hide()
-            frmMNUIMNU100.Show()
+            Me.Hide()            
         Catch ex As Exception
             MNBTCMN100.ShowMessageException()
         End Try
