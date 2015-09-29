@@ -122,7 +122,7 @@ Public Class MNUILGN100CTL
                 frmMNUILGN110.ShowDialog()
             ElseIf isLoginSuccess AndAlso isPasswordOneTime = False Then
                 frmMNUILGN100.Hide()
-                frmMNUIMNU100.ShowDialog()
+                Menu.ShowDialog()
             End If
 
         Catch ex As Exception

@@ -4,6 +4,28 @@ Imports MyNo.Common
 Public Class BaseForm
     Inherits System.Windows.Forms.Form
 
+    'ｸﾗｽﾒﾝﾊﾞ変数宣言
+    Public m_ErrorCd As String   'ｴﾗｰｺｰﾄﾞ
+    Public m_Result As Boolean   '戻り値 正常:true  異常:false
+    Public m_Param1 As String    'ﾊﾟﾗﾒｰﾀ1(検索画面用)
+    Public m_Param2 As String    'ﾊﾟﾗﾒｰﾀ2(検索画面用)
+    Public m_Param3 As String  'ﾊﾟﾗﾒｰﾀ3(検索画面用)
+    Public m_Param4 As String  'ﾊﾟﾗﾒｰﾀ3(検索画面用)
+    Public m_Param5 As String  'ﾊﾟﾗﾒｰﾀ3(検索画面用)
+    Public m_LastControl As String '前のｺﾝﾄﾛｰﾙ
+    Public m_LastValue As String '前のｺﾝﾄﾛｰﾙの値
+    Public m_Step As Integer
+    'Public m_Tag As ClassPrint
+
+    Public ProjectNo As String
+    Public IraiNo As String
+    Public TantouCd As String
+    '2008/04/25 追加開始 古川 ESCAPEキーによるクローズ制御
+
+    'ThongTH Set focus for control textbox
+    Public m_ctlFocus As Control
+    Private m_CloseByEscapeKey As Boolean
+
     Protected Overrides Sub OnLoad(e As EventArgs)
         MyBase.OnLoad(e)
 
@@ -49,4 +71,7 @@ Public Class BaseForm
         End If
         Return MyBase.ProcessCmdKey(msg, keyData)
     End Function
+    Overridable Sub Disconnection()
+
+    End Sub
 End Class

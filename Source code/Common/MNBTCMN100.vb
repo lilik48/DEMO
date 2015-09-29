@@ -1413,6 +1413,129 @@ Namespace Common
             End Try
         End Function
 
+        Public Shared Function getNumberMenu(ByVal MenuText As String) As Integer
+            Dim getNumber As String = Regex.Match(MenuText, "\d+").Value     'Get number in header menu   
+            If IsNumeric(getNumber) Then
+                Return CInt(getNumber)
+            End If
+            Return 0
+        End Function
+
+        Public Shared Function OpenTagPage(ByRef tagPage As TabPage, ByRef NextForm As Form, Optional ByVal _tabControl As TabControl = Nothing)
+            Dim i As Int32 = 1
+            Dim maxMenu As Integer = 0
+            Dim tag As TabPage = New TabPage(NextForm.Name)
+            Dim tabControl As TabControl
+            If _tabControl IsNot Nothing Then
+                tabControl = _tabControl
+            ElseIf tagPage IsNot Nothing Then
+                tabControl = DirectCast(tagPage.Parent, TabControl)
+            End If
+            If NextForm IsNot Nothing Then
+                NextForm.TopLevel = False
+                NextForm.Visible = True
+                NextForm.FormBorderStyle = FormBorderStyle.None
+                NextForm.Dock = DockStyle.None
+                NextForm.Height = tabControl.Height - 30
+                NextForm.Width = tabControl.Width
+
+                Dim frmName As String
+                Select Case (NextForm.Name)
+                    'Case "frmStatusManagement"
+                    '    frmName = UC_SMANAGEMENT
+                    'Case "frmMitumori1"
+                    '    frmName = UC_MITUMORI1
+                    'Case "frmPdSagyoIraiPrint"
+                    '    frmName = UC_PDSAGYOIRAIPRINT
+                    'Case "frmProject"
+                    '    frmName = UC_PROJECT
+                    'Case "frmJyutyu"
+                    '    frmName = UC_JYUTYU
+                    'Case "frmJyutyuSale"
+                    '    frmName = UC_JYUTYU_SALE
+                    'Case "frmPdSagyoIrai"
+                    '    frmName = UC_PDSAGYOIRAI
+                    'Case "frmNohinShijiGamen"
+                    '    frmName = UC_NOHINSHIJIGAMEN
+                    'Case "frmSeikyu"
+                    '    frmName = UC_SEIKYU
+                    'Case "frmConfirmRequest"
+                    '    frmName = UC_CONFIRMREQUEST
+                    'Case "frmJyutyuNew"
+                    '    frmName = UC_JYUTYU
+                    'Case "frmJyutyuNewSale"
+                    '    frmName = UC_JYUTYU_SALE
+                    'Case Else
+                    '    frmName = ""
+                End Select
+                ' Check, How tabPage same Name in TabControl
+
+                For j As Integer = 0 To tabControl.TabPages.Count - 1
+                    If tabControl.TabPages(j).Name = frmName Then
+                        i = i + 1
+                        Dim number As Integer = getNumberMenu(tabControl.TabPages(j).Text)
+                        If number > maxMenu Then
+                            maxMenu = number
+                        End If
+                    End If
+                Next
+                If maxMenu <> 0 Then
+                    i = maxMenu + 1
+                End If
+                If i = 1 Then
+                    tag.Text = NextForm.Text
+                ElseIf i > 1 Then
+                    tag.Text = NextForm.Text + "(" + i.ToString() + ")"
+                End If
+                tag.Name = frmName
+                tag.Controls.Add(NextForm)
+                tabControl.TabPages.Add(tag)
+                tabControl.SelectTab(tag)
+
+                If tagPage IsNot Nothing Then
+                    If TypeOf tagPage.TopLevelControl Is Menu Then
+                        Dim frmMenu As Menu = DirectCast(tagPage.TopLevelControl, Menu)
+                        Dim form As BaseForm = DirectCast(NextForm, BaseForm)
+                        'Dim _tag As New ClassPrint()
+                        'Select Case (frmName)
+                        '    Case UC_MITUMORI1
+                        '        _tag.m_PrintButton1 = True
+                        '        _tag.m_PrintScreen1 = New frmMitumoriPrint(True, False)
+                        '        form.m_Tag = _tag
+                        '        form.m_Step = 1
+                        '    Case UC_PDSAGYOIRAIPRINT
+                        '        _tag.m_PrintButton1 = True
+                        '        _tag.m_PrintScreen1 = New frmPdSagyoIraiPrint()
+                        '        form.m_Tag = _tag
+                        '        form.m_Step = 1
+                        '    Case UC_NOHINSHIJIGAMEN
+                        '        _tag.m_PrintButton1 = True
+                        '        _tag.m_PrintScreen1 = New frmNohinShijiPrint()
+                        '        form.m_Tag = _tag
+                        '        form.m_Step = 1
+                        '    Case UC_SEIKYU
+                        '        If KENGEN_LVL <> "4" Then
+                        '            _tag.m_PrintButton1 = True
+                        '        End If
+                        '        _tag.m_PrintButton2 = True
+                        '        _tag.m_PrintScreen1 = New frmSeikyuKakuninNew()
+                        '        _tag.m_PrintScreen2 = New frmSeikyuItiranPrint()
+                        '        form.m_Tag = _tag
+                        '        form.m_Step = 4
+                        '    Case UC_JYUTYU, UC_JYUTYU_SALE
+                        '        _tag.m_PrintButton1 = True
+                        '        _tag.m_PrintButton2 = True
+                        '        _tag.m_PrintScreen1 = New frmHoukokuPrint()
+                        '        _tag.m_PrintScreen2 = New frmTyumonPrint()
+                        '        form.m_Tag = _tag
+                        'End Select
+                        frmMenu.SetEnablePrintButton()
+                        'THONGTH comment, not use by spec - 20150213
+                        'frmMenu.SetPictureAffterCloseTab()
+                    End If
+                End If
+            End If
+        End Function
 #End Region
 
 #Region "Get-Set common info"

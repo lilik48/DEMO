@@ -6,7 +6,12 @@ MyNo
 </name>
 </assembly>
 <members>
-<member name="M:MyNo.frmMNUIDTR200.frmMNUIDTR200_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+<member name="M:MyNo.Menu.SetEnablePrintButton">
+	<summary>
+ Set Print enable after select tab
+ </summary>
+	<remarks></remarks>
+</member><member name="M:MyNo.frmMNUIDTR200.frmMNUIDTR200_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
 	<summary>
  frmMNUIDTR200 Paint
  </summary>
