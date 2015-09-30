@@ -100,10 +100,10 @@
           <Property Name="namsanxuat" Type="int4" />
           <Property Name="tskh_mba" Type="bpchar" MaxLength="2" />
           <Property Name="tskh_tucaudao" Type="bpchar" MaxLength="50" />
-          <Property Name="ngaythinghiem" Type="time" Precision="6" />
-          <Property Name="ngaycapnhat" Type="time" Precision="6" Nullable="false" />
           <Property Name="nguoicapnhat" Type="bpchar" MaxLength="20" />
           <Property Name="lo" Type="bpchar" MaxLength="20" />
+          <Property Name="ngaycapnhat" Type="date" />
+          <Property Name="ngaythinghiem" Type="date" />
         </EntityType>
         <EntityType Name="t_bienapimport">
           <Key>
@@ -114,10 +114,9 @@
           <Property Name="nguoinhap" Type="bpchar" MaxLength="20" />
           <Property Name="tenfile" Type="bpchar" MaxLength="80" />
           <Property Name="delflg" Type="int4" />
-          <Property Name="deldatetime" Type="time" Precision="6" />
-          <Property Name="adddatetime" Type="time" Precision="6" />
           <Property Name="nguoithem" Type="bpchar" MaxLength="20" />
           <Property Name="exceldata" Type="bytea" />
+          <Property Name="ngayupdate" Type="date" />
         </EntityType>
         <EntityType Name="t_bienaplichsu">
           <Key>
@@ -142,9 +141,9 @@
           <Property Name="namsanxuat" Type="int4" />
           <Property Name="tskh_mba" Type="bpchar" MaxLength="2" />
           <Property Name="tskh_tucaudao" Type="bpchar" MaxLength="50" />
-          <Property Name="ngaythinghiem" Type="time" Precision="6" />
-          <Property Name="ngaycapnhat" Type="time" Precision="6" Nullable="false" />
           <Property Name="nguoicapnhat" Type="bpchar" MaxLength="20" />
+          <Property Name="ngaythinghiem" Type="date" />
+          <Property Name="ngaycapnhat" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="t_company">
           <Key>
@@ -791,10 +790,10 @@
           <Property Name="namsanxuat" Type="Int32" />
           <Property Name="tskh_mba" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
           <Property Name="tskh_tucaudao" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="ngaythinghiem" Type="Time" Precision="6" />
-          <Property Name="ngaycapnhat" Type="Time" Precision="6" Nullable="false" />
           <Property Name="nguoicapnhat" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="lo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="ngaycapnhat" Type="DateTime" Precision="0" />
+          <Property Name="ngaythinghiem" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="t_bienapimport">
           <Key>
@@ -805,10 +804,9 @@
           <Property Name="nguoinhap" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="tenfile" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
           <Property Name="delflg" Type="Int32" />
-          <Property Name="deldatetime" Type="Time" Precision="6" />
-          <Property Name="adddatetime" Type="Time" Precision="6" />
           <Property Name="nguoithem" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="exceldata" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+          <Property Name="ngayupdate" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="t_bienaplichsu">
           <Key>
@@ -833,9 +831,9 @@
           <Property Name="namsanxuat" Type="Int32" />
           <Property Name="tskh_mba" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
           <Property Name="tskh_tucaudao" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="ngaythinghiem" Type="Time" Precision="6" />
-          <Property Name="ngaycapnhat" Type="Time" Precision="6" Nullable="false" />
           <Property Name="nguoicapnhat" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="ngaythinghiem" Type="DateTime" Precision="0" />
+          <Property Name="ngaycapnhat" Type="DateTime" Precision="0" Nullable="false" />
         </EntityType>
         <EntityType Name="t_company">
           <Key>
@@ -1486,10 +1484,10 @@
                 <ScalarProperty Name="namsanxuat" ColumnName="namsanxuat" />
                 <ScalarProperty Name="tskh_mba" ColumnName="tskh_mba" />
                 <ScalarProperty Name="tskh_tucaudao" ColumnName="tskh_tucaudao" />
-                <ScalarProperty Name="ngaythinghiem" ColumnName="ngaythinghiem" />
-                <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
                 <ScalarProperty Name="nguoicapnhat" ColumnName="nguoicapnhat" />
                 <ScalarProperty Name="lo" ColumnName="lo" />
+                <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+                <ScalarProperty Name="ngaythinghiem" ColumnName="ngaythinghiem" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1501,10 +1499,9 @@
                 <ScalarProperty Name="nguoinhap" ColumnName="nguoinhap" />
                 <ScalarProperty Name="tenfile" ColumnName="tenfile" />
                 <ScalarProperty Name="delflg" ColumnName="delflg" />
-                <ScalarProperty Name="deldatetime" ColumnName="deldatetime" />
-                <ScalarProperty Name="adddatetime" ColumnName="adddatetime" />
                 <ScalarProperty Name="nguoithem" ColumnName="nguoithem" />
                 <ScalarProperty Name="exceldata" ColumnName="exceldata" />
+                <ScalarProperty Name="ngayupdate" ColumnName="ngayupdate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1529,9 +1526,9 @@
                 <ScalarProperty Name="namsanxuat" ColumnName="namsanxuat" />
                 <ScalarProperty Name="tskh_mba" ColumnName="tskh_mba" />
                 <ScalarProperty Name="tskh_tucaudao" ColumnName="tskh_tucaudao" />
+                <ScalarProperty Name="nguoicapnhat" ColumnName="nguoicapnhat" />
                 <ScalarProperty Name="ngaythinghiem" ColumnName="ngaythinghiem" />
                 <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
-                <ScalarProperty Name="nguoicapnhat" ColumnName="nguoicapnhat" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

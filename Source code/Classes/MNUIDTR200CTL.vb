@@ -74,12 +74,12 @@ Public Class MNUIDTR200CTL
     Public Function ValidateInputImport(ByVal in_strUrlPath As String) As Boolean
         Try
             If in_strUrlPath = "" Or in_strUrlPath Is Nothing Then
-                MNBTCMN100.ShowMessage("MSGVWE00001", "ファイル参照パス", "", "")
+                MNBTCMN100.ShowMessage("MSGVWE00001", "Đường dẫn tham chiếu tập tin", "", "")
                 Return False
             ElseIf IO.File.Exists(in_strUrlPath) = False Then
-                MNBTCMN100.ShowMessage("MSGVWE00018", "ファイル参照パス", "", "")
+                MNBTCMN100.ShowMessage("MSGVWE00018", "Đường dẫn tham chiếu tập tin", "", "")
                 Return False
-            ElseIf IO.Path.GetExtension(in_strUrlPath) <> ".csv" AndAlso IO.Path.GetExtension(in_strUrlPath) <> ".CSV" Then
+            ElseIf IO.Path.GetExtension(in_strUrlPath) <> ".xlsx" AndAlso IO.Path.GetExtension(in_strUrlPath) <> ".xlsx" Then
                 MNBTCMN100.ShowMessage("MSGVWE00019", "", "", "")
                 Return False
             End If

@@ -95,10 +95,10 @@
     <Property Name="namsanxuat" Type="Int32" />
     <Property Name="tskh_mba" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
     <Property Name="tskh_tucaudao" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Name="ngaythinghiem" Type="Time" Precision="6" />
-    <Property Name="ngaycapnhat" Type="Time" Precision="6" Nullable="false" />
     <Property Name="nguoicapnhat" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
     <Property Name="lo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="ngaycapnhat" Type="DateTime" Precision="0" />
+    <Property Name="ngaythinghiem" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="t_bienapimport">
     <Key>
@@ -109,10 +109,9 @@
     <Property Name="nguoinhap" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
     <Property Name="tenfile" Type="String" MaxLength="80" FixedLength="true" Unicode="true" />
     <Property Name="delflg" Type="Int32" />
-    <Property Name="deldatetime" Type="Time" Precision="6" />
-    <Property Name="adddatetime" Type="Time" Precision="6" />
     <Property Name="nguoithem" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
     <Property Name="exceldata" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+    <Property Name="ngayupdate" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="t_bienaplichsu">
     <Key>
@@ -137,9 +136,9 @@
     <Property Name="namsanxuat" Type="Int32" />
     <Property Name="tskh_mba" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
     <Property Name="tskh_tucaudao" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Name="ngaythinghiem" Type="Time" Precision="6" />
-    <Property Name="ngaycapnhat" Type="Time" Precision="6" Nullable="false" />
     <Property Name="nguoicapnhat" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="ngaythinghiem" Type="DateTime" Precision="0" />
+    <Property Name="ngaycapnhat" Type="DateTime" Precision="0" Nullable="false" />
   </EntityType>
   <EntityType Name="t_company">
     <Key>

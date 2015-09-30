@@ -95,10 +95,10 @@
     <Property Name="namsanxuat" Type="int4" />
     <Property Name="tskh_mba" Type="bpchar" MaxLength="2" />
     <Property Name="tskh_tucaudao" Type="bpchar" MaxLength="50" />
-    <Property Name="ngaythinghiem" Type="time" Precision="6" />
-    <Property Name="ngaycapnhat" Type="time" Precision="6" Nullable="false" />
     <Property Name="nguoicapnhat" Type="bpchar" MaxLength="20" />
     <Property Name="lo" Type="bpchar" MaxLength="20" />
+    <Property Name="ngaycapnhat" Type="date" />
+    <Property Name="ngaythinghiem" Type="date" />
   </EntityType>
   <EntityType Name="t_bienapimport">
     <Key>
@@ -109,10 +109,9 @@
     <Property Name="nguoinhap" Type="bpchar" MaxLength="20" />
     <Property Name="tenfile" Type="bpchar" MaxLength="80" />
     <Property Name="delflg" Type="int4" />
-    <Property Name="deldatetime" Type="time" Precision="6" />
-    <Property Name="adddatetime" Type="time" Precision="6" />
     <Property Name="nguoithem" Type="bpchar" MaxLength="20" />
     <Property Name="exceldata" Type="bytea" />
+    <Property Name="ngayupdate" Type="date" />
   </EntityType>
   <EntityType Name="t_bienaplichsu">
     <Key>
@@ -137,9 +136,9 @@
     <Property Name="namsanxuat" Type="int4" />
     <Property Name="tskh_mba" Type="bpchar" MaxLength="2" />
     <Property Name="tskh_tucaudao" Type="bpchar" MaxLength="50" />
-    <Property Name="ngaythinghiem" Type="time" Precision="6" />
-    <Property Name="ngaycapnhat" Type="time" Precision="6" Nullable="false" />
     <Property Name="nguoicapnhat" Type="bpchar" MaxLength="20" />
+    <Property Name="ngaythinghiem" Type="date" />
+    <Property Name="ngaycapnhat" Type="date" Nullable="false" />
   </EntityType>
   <EntityType Name="t_company">
     <Key>

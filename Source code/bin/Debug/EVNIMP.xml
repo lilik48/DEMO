@@ -11,13 +11,6 @@ EVNIMP
  Set Print enable after select tab
  </summary>
 	<remarks></remarks>
-</member><member name="M:MyNo.frmMNUIDTR200.frmMNUIDTR200_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
-	<summary>
- frmMNUIDTR200 Paint
- </summary>
-	<param name="sender"></param>
-	<param name="e"></param>
-	<remarks></remarks>
 </member><member name="M:MyNo.frmMNUIDTR200.frmMNUIDTR200_Load(System.Object,System.EventArgs)">
 	<summary>
  frmMNUIDTR200 Load

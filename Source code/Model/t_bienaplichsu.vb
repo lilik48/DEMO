@@ -29,8 +29,8 @@ Partial Public Class t_bienaplichsu
     Public Property namsanxuat As Nullable(Of Integer)
     Public Property tskh_mba As String
     Public Property tskh_tucaudao As String
-    Public Property ngaythinghiem As Nullable(Of System.TimeSpan)
-    Public Property ngaycapnhat As System.TimeSpan
     Public Property nguoicapnhat As String
+    Public Property ngaythinghiem As Nullable(Of Date)
+    Public Property ngaycapnhat As Date
 
 End Class

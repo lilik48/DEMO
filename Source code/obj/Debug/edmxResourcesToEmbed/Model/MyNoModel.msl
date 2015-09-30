@@ -99,10 +99,10 @@
           <ScalarProperty Name="namsanxuat" ColumnName="namsanxuat" />
           <ScalarProperty Name="tskh_mba" ColumnName="tskh_mba" />
           <ScalarProperty Name="tskh_tucaudao" ColumnName="tskh_tucaudao" />
-          <ScalarProperty Name="ngaythinghiem" ColumnName="ngaythinghiem" />
-          <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
           <ScalarProperty Name="nguoicapnhat" ColumnName="nguoicapnhat" />
           <ScalarProperty Name="lo" ColumnName="lo" />
+          <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+          <ScalarProperty Name="ngaythinghiem" ColumnName="ngaythinghiem" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -114,10 +114,9 @@
           <ScalarProperty Name="nguoinhap" ColumnName="nguoinhap" />
           <ScalarProperty Name="tenfile" ColumnName="tenfile" />
           <ScalarProperty Name="delflg" ColumnName="delflg" />
-          <ScalarProperty Name="deldatetime" ColumnName="deldatetime" />
-          <ScalarProperty Name="adddatetime" ColumnName="adddatetime" />
           <ScalarProperty Name="nguoithem" ColumnName="nguoithem" />
           <ScalarProperty Name="exceldata" ColumnName="exceldata" />
+          <ScalarProperty Name="ngayupdate" ColumnName="ngayupdate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -142,9 +141,9 @@
           <ScalarProperty Name="namsanxuat" ColumnName="namsanxuat" />
           <ScalarProperty Name="tskh_mba" ColumnName="tskh_mba" />
           <ScalarProperty Name="tskh_tucaudao" ColumnName="tskh_tucaudao" />
+          <ScalarProperty Name="nguoicapnhat" ColumnName="nguoicapnhat" />
           <ScalarProperty Name="ngaythinghiem" ColumnName="ngaythinghiem" />
           <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
-          <ScalarProperty Name="nguoicapnhat" ColumnName="nguoicapnhat" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

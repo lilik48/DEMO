@@ -30,26 +30,12 @@ Partial Class frmMNUIDTR200
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMNUIDTR200))
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblImport = New System.Windows.Forms.Label()
         Me.txtPathFile = New System.Windows.Forms.TextBox()
         Me.btnImport = New System.Windows.Forms.Button()
         Me.btnFileChoose = New System.Windows.Forms.Button()
-        Me.lblTitleExport = New System.Windows.Forms.Label()
-        Me.btnClear = New System.Windows.Forms.Button()
-        Me.btnExport = New System.Windows.Forms.Button()
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.btnNext = New System.Windows.Forms.Button()
-        Me.lblPage = New System.Windows.Forms.Label()
-        Me.btnPrevious = New System.Windows.Forms.Button()
-        Me.txtBranchEnd = New System.Windows.Forms.TextBox()
-        Me.txtBranchStart = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtBranchCd = New System.Windows.Forms.TextBox()
-        Me.txtCompanyCd = New System.Windows.Forms.TextBox()
-        Me.lblCompanyBranchCD = New System.Windows.Forms.Label()
-        Me.企業コード = New System.Windows.Forms.Label()
         Me.dgvImportLog = New MyNo.CustomDataGridView()
         Me.seq = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.impdatetime = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,206 +50,65 @@ Partial Class frmMNUIDTR200
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("MS PGothic", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.lblTitle.Location = New System.Drawing.Point(40, 22)
+        Me.lblTitle.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.lblTitle.Location = New System.Drawing.Point(19, 8)
         Me.lblTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(129, 19)
+        Me.lblTitle.Size = New System.Drawing.Size(117, 18)
         Me.lblTitle.TabIndex = 2
-        Me.lblTitle.Text = "企業情報取込"
+        Me.lblTitle.Text = "Thông tin nhập"
         '
         'lblImport
         '
         Me.lblImport.AutoSize = True
-        Me.lblImport.Font = New System.Drawing.Font("MS PGothic", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.lblImport.Location = New System.Drawing.Point(40, 61)
+        Me.lblImport.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.lblImport.Location = New System.Drawing.Point(19, 32)
         Me.lblImport.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblImport.Name = "lblImport"
-        Me.lblImport.Size = New System.Drawing.Size(93, 19)
+        Me.lblImport.Size = New System.Drawing.Size(46, 16)
         Me.lblImport.TabIndex = 3
-        Me.lblImport.Text = "インポート"
+        Me.lblImport.Text = "Import"
         '
         'txtPathFile
         '
-        Me.txtPathFile.Font = New System.Drawing.Font("MS Mincho", 11.0!)
-        Me.txtPathFile.Location = New System.Drawing.Point(40, 100)
+        Me.txtPathFile.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtPathFile.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.txtPathFile.Location = New System.Drawing.Point(19, 53)
         Me.txtPathFile.Name = "txtPathFile"
-        Me.txtPathFile.Size = New System.Drawing.Size(1096, 22)
+        Me.txtPathFile.Size = New System.Drawing.Size(989, 23)
         Me.txtPathFile.TabIndex = 1
         '
         'btnImport
         '
-        Me.btnImport.Font = New System.Drawing.Font("MS PGothic", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnImport.Location = New System.Drawing.Point(1207, 142)
+        Me.btnImport.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnImport.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.btnImport.Location = New System.Drawing.Point(1073, 86)
         Me.btnImport.Name = "btnImport"
         Me.btnImport.Size = New System.Drawing.Size(100, 35)
         Me.btnImport.TabIndex = 3
-        Me.btnImport.Text = "実行(&R)"
+        Me.btnImport.Text = "Import"
         Me.btnImport.UseVisualStyleBackColor = True
         '
         'btnFileChoose
         '
-        Me.btnFileChoose.Font = New System.Drawing.Font("MS PGothic", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnFileChoose.Location = New System.Drawing.Point(1207, 97)
+        Me.btnFileChoose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnFileChoose.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFileChoose.Location = New System.Drawing.Point(1073, 52)
         Me.btnFileChoose.Name = "btnFileChoose"
         Me.btnFileChoose.Size = New System.Drawing.Size(100, 25)
         Me.btnFileChoose.TabIndex = 2
-        Me.btnFileChoose.Text = "参照"
+        Me.btnFileChoose.Text = "Chọn file"
         Me.btnFileChoose.UseVisualStyleBackColor = True
-        '
-        'lblTitleExport
-        '
-        Me.lblTitleExport.AutoSize = True
-        Me.lblTitleExport.Font = New System.Drawing.Font("MS PGothic", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.lblTitleExport.Location = New System.Drawing.Point(40, 487)
-        Me.lblTitleExport.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblTitleExport.Name = "lblTitleExport"
-        Me.lblTitleExport.Size = New System.Drawing.Size(112, 19)
-        Me.lblTitleExport.TabIndex = 35
-        Me.lblTitleExport.Text = "エクスポート"
-        '
-        'btnClear
-        '
-        Me.btnClear.Font = New System.Drawing.Font("MS PGothic", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnClear.Location = New System.Drawing.Point(40, 596)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(100, 35)
-        Me.btnClear.TabIndex = 12
-        Me.btnClear.Text = "クリア(&D)"
-        Me.btnClear.UseVisualStyleBackColor = True
-        '
-        'btnExport
-        '
-        Me.btnExport.Font = New System.Drawing.Font("MS PGothic", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnExport.Location = New System.Drawing.Point(160, 596)
-        Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(100, 35)
-        Me.btnExport.TabIndex = 13
-        Me.btnExport.Text = "実行(&E)"
-        Me.btnExport.UseVisualStyleBackColor = True
-        '
-        'btnClose
-        '
-        Me.btnClose.Font = New System.Drawing.Font("MS PGothic", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnClose.Location = New System.Drawing.Point(1228, 669)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(100, 35)
-        Me.btnClose.TabIndex = 14
-        Me.btnClose.Text = "閉じる（&C）"
-        Me.btnClose.UseVisualStyleBackColor = True
-        '
-        'btnNext
-        '
-        Me.btnNext.Font = New System.Drawing.Font("MS PGothic", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnNext.Location = New System.Drawing.Point(93, 437)
-        Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(25, 23)
-        Me.btnNext.TabIndex = 7
-        Me.btnNext.Tag = "1"
-        Me.btnNext.Text = "&>"
-        Me.btnNext.UseVisualStyleBackColor = True
-        '
-        'lblPage
-        '
-        Me.lblPage.AutoSize = True
-        Me.lblPage.Location = New System.Drawing.Point(72, 441)
-        Me.lblPage.Name = "lblPage"
-        Me.lblPage.Size = New System.Drawing.Size(15, 15)
-        Me.lblPage.TabIndex = 6
-        Me.lblPage.Text = "1"
-        Me.lblPage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnPrevious
-        '
-        Me.btnPrevious.Font = New System.Drawing.Font("MS PGothic", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnPrevious.Location = New System.Drawing.Point(40, 437)
-        Me.btnPrevious.Name = "btnPrevious"
-        Me.btnPrevious.Size = New System.Drawing.Size(25, 23)
-        Me.btnPrevious.TabIndex = 5
-        Me.btnPrevious.Tag = "0"
-        Me.btnPrevious.Text = "&<"
-        Me.btnPrevious.UseVisualStyleBackColor = True
-        '
-        'txtBranchEnd
-        '
-        Me.txtBranchEnd.Font = New System.Drawing.Font("MS Mincho", 11.0!)
-        Me.txtBranchEnd.Location = New System.Drawing.Point(583, 557)
-        Me.txtBranchEnd.MaxLength = 3
-        Me.txtBranchEnd.Name = "txtBranchEnd"
-        Me.txtBranchEnd.Size = New System.Drawing.Size(100, 22)
-        Me.txtBranchEnd.TabIndex = 11
-        Me.txtBranchEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'txtBranchStart
-        '
-        Me.txtBranchStart.Font = New System.Drawing.Font("MS Mincho", 11.0!)
-        Me.txtBranchStart.Location = New System.Drawing.Point(431, 557)
-        Me.txtBranchStart.MaxLength = 3
-        Me.txtBranchStart.Name = "txtBranchStart"
-        Me.txtBranchStart.Size = New System.Drawing.Size(100, 22)
-        Me.txtBranchStart.TabIndex = 10
-        Me.txtBranchStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(407, 561)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(22, 15)
-        Me.Label9.TabIndex = 56
-        Me.Label9.Text = "自"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(559, 561)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(22, 15)
-        Me.Label13.TabIndex = 55
-        Me.Label13.Text = "至"
-        '
-        'txtBranchCd
-        '
-        Me.txtBranchCd.Font = New System.Drawing.Font("MS Mincho", 11.0!)
-        Me.txtBranchCd.Location = New System.Drawing.Point(160, 557)
-        Me.txtBranchCd.MaxLength = 100
-        Me.txtBranchCd.Name = "txtBranchCd"
-        Me.txtBranchCd.Size = New System.Drawing.Size(200, 22)
-        Me.txtBranchCd.TabIndex = 9
-        Me.txtBranchCd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'txtCompanyCd
-        '
-        Me.txtCompanyCd.Font = New System.Drawing.Font("MS Mincho", 11.0!)
-        Me.txtCompanyCd.Location = New System.Drawing.Point(160, 522)
-        Me.txtCompanyCd.MaxLength = 5
-        Me.txtCompanyCd.Name = "txtCompanyCd"
-        Me.txtCompanyCd.Size = New System.Drawing.Size(200, 22)
-        Me.txtCompanyCd.TabIndex = 8
-        '
-        'lblCompanyBranchCD
-        '
-        Me.lblCompanyBranchCD.AutoSize = True
-        Me.lblCompanyBranchCD.Location = New System.Drawing.Point(40, 561)
-        Me.lblCompanyBranchCD.Name = "lblCompanyBranchCD"
-        Me.lblCompanyBranchCD.Size = New System.Drawing.Size(37, 15)
-        Me.lblCompanyBranchCD.TabIndex = 54
-        Me.lblCompanyBranchCD.Text = "枝番"
-        '
-        '企業コード
-        '
-        Me.企業コード.AutoSize = True
-        Me.企業コード.Location = New System.Drawing.Point(40, 526)
-        Me.企業コード.Name = "企業コード"
-        Me.企業コード.Size = New System.Drawing.Size(99, 15)
-        Me.企業コード.TabIndex = 52
-        Me.企業コード.Text = "企業コード(※)"
         '
         'dgvImportLog
         '
         Me.dgvImportLog.AllowUserToAddRows = False
         Me.dgvImportLog.AllowUserToDeleteRows = False
         Me.dgvImportLog.AllowUserToResizeRows = False
+        Me.dgvImportLog.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("MS PGothic", 11.0!)
@@ -274,13 +119,13 @@ Partial Class frmMNUIDTR200
         Me.dgvImportLog.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvImportLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvImportLog.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.seq, Me.impdatetime, Me.impusercd, Me.filename, Me.imptype, Me.errorFlg, Me.dowloadFlg})
-        Me.dgvImportLog.Location = New System.Drawing.Point(40, 197)
+        Me.dgvImportLog.Location = New System.Drawing.Point(19, 127)
         Me.dgvImportLog.Name = "dgvImportLog"
         Me.dgvImportLog.ReadOnly = True
         Me.dgvImportLog.RowHeadersVisible = False
-        Me.dgvImportLog.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("MS Mincho", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvImportLog.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Tahoma", 9.75!)
         Me.dgvImportLog.RowTemplate.Height = 20
-        Me.dgvImportLog.Size = New System.Drawing.Size(1265, 226)
+        Me.dgvImportLog.Size = New System.Drawing.Size(1154, 332)
         Me.dgvImportLog.TabIndex = 4
         '
         'seq
@@ -370,22 +215,7 @@ Partial Class frmMNUIDTR200
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1350, 730)
-        Me.Controls.Add(Me.txtBranchEnd)
-        Me.Controls.Add(Me.txtBranchStart)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.txtBranchCd)
-        Me.Controls.Add(Me.txtCompanyCd)
-        Me.Controls.Add(Me.lblCompanyBranchCD)
-        Me.Controls.Add(Me.企業コード)
-        Me.Controls.Add(Me.btnNext)
-        Me.Controls.Add(Me.lblPage)
-        Me.Controls.Add(Me.btnPrevious)
-        Me.Controls.Add(Me.btnClose)
-        Me.Controls.Add(Me.btnExport)
-        Me.Controls.Add(Me.btnClear)
-        Me.Controls.Add(Me.lblTitleExport)
+        Me.ClientSize = New System.Drawing.Size(1191, 471)
         Me.Controls.Add(Me.dgvImportLog)
         Me.Controls.Add(Me.btnFileChoose)
         Me.Controls.Add(Me.btnImport)
@@ -394,6 +224,7 @@ Partial Class frmMNUIDTR200
         Me.Controls.Add(Me.lblTitle)
         Me.Font = New System.Drawing.Font("MS PGothic", 11.0!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -411,21 +242,6 @@ Partial Class frmMNUIDTR200
     Friend WithEvents txtPathFile As System.Windows.Forms.TextBox
     Friend WithEvents btnImport As System.Windows.Forms.Button
     Friend WithEvents btnFileChoose As System.Windows.Forms.Button
-    Friend WithEvents lblTitleExport As System.Windows.Forms.Label
-    Friend WithEvents btnClear As System.Windows.Forms.Button
-    Friend WithEvents btnExport As System.Windows.Forms.Button
-    Friend WithEvents btnClose As System.Windows.Forms.Button
-    Friend WithEvents btnNext As System.Windows.Forms.Button
-    Friend WithEvents lblPage As System.Windows.Forms.Label
-    Friend WithEvents btnPrevious As System.Windows.Forms.Button
-    Friend WithEvents txtBranchEnd As System.Windows.Forms.TextBox
-    Friend WithEvents txtBranchStart As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents txtBranchCd As System.Windows.Forms.TextBox
-    Friend WithEvents txtCompanyCd As System.Windows.Forms.TextBox
-    Friend WithEvents lblCompanyBranchCD As System.Windows.Forms.Label
-    Friend WithEvents 企業コード As System.Windows.Forms.Label
     Friend WithEvents dgvImportLog As MyNo.CustomDataGridView
     Friend WithEvents seq As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents impdatetime As System.Windows.Forms.DataGridViewTextBoxColumn

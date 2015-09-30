@@ -126,8 +126,8 @@ Public Class Menu
             Select Case (e.Node.Name)
                 Case "ucNhanVien"
                     uc = New frmMNUIMTN400()
-                Case "ucSearchData"
-                    'uc = New frmMitumori1(False)
+                Case "ucImport"
+                    uc = New frmMNUIDTR200()
                     'Case UC_JYUTYU
                     '    uc = New frmJyutyuNew(False)
                     'Case UC_JYUTYU_SALE

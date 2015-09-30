@@ -88,7 +88,12 @@ C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.exe.licenses
 C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.exe
 C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.xml
 C:\Users\DucAnh\OneDrive\Làm Việc\Project\MyNo\obj\Debug\MyNo.pdb
-E:\Project\Github\Demo\DEMO\Source code\obj\Debug\MyNo.vbprojResolveAssemblyReference.cache
+E:\Project\Github\Demo\DEMO\Source code\bin\Debug\EVNIMP.exe.config
+E:\Project\Github\Demo\DEMO\Source code\bin\Debug\EVNIMP.exe
+E:\Project\Github\Demo\DEMO\Source code\bin\Debug\EVNIMP.pdb
+E:\Project\Github\Demo\DEMO\Source code\bin\Debug\EVNIMP.xml
+E:\Project\Github\Demo\DEMO\Source code\bin\Debug\Npgsql.dll
+E:\Project\Github\Demo\DEMO\Source code\bin\Debug\System.Transactions.dll
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\MyNo.frmLoading.resources
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\MyNo.Menu.resources
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\MyNo.frmMNUIDTR100.resources
@@ -101,12 +106,6 @@ E:\Project\Github\Demo\DEMO\Source code\obj\Debug\MyNo.frmMNUILGN100.resources
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\MyNo.frmMNUIMTN400.resources
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\MyNo.Resources.resources
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\MyNo.vbproj.GenerateResource.Cache
-E:\Project\Github\Demo\DEMO\Source code\bin\Debug\Npgsql.dll
-E:\Project\Github\Demo\DEMO\Source code\bin\Debug\System.Transactions.dll
-E:\Project\Github\Demo\DEMO\Source code\bin\Debug\EVNIMP.exe.config
-E:\Project\Github\Demo\DEMO\Source code\bin\Debug\EVNIMP.exe
-E:\Project\Github\Demo\DEMO\Source code\bin\Debug\EVNIMP.pdb
-E:\Project\Github\Demo\DEMO\Source code\bin\Debug\EVNIMP.xml
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\EVNIMP.exe.licenses
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\EVNIMP.exe
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\EVNIMP.xml

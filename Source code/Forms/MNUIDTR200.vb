@@ -13,33 +13,20 @@
 Imports MyNo.Common
 Imports System.Data.Entity
 Imports System.Threading
+Imports System.IO
+Imports NPOI.XSSF.UserModel
 
 Public Class frmMNUIDTR200
     'Start paging
     Private p_intNumItem As Integer
-    Private p_mynoContext As mynoEntities
+    Private p_mynoContext As MyNoEntities
     Private p_MNUIDTR200CTL As New MNUIDTR200CTL(Me)
     Private c_strTextBefore As String = Nothing
     Private c_strTextSelection As Integer = Nothing
     Private oldUrlImport As String = MNBTCMN100.GetConfig("Import_Dir_CSV", "config.ini")
-
+    Private strPathFile As String = ""
     Private c_trd As Thread
 
-    ''' <summary>
-    ''' frmMNUIDTR200 Paint
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub frmMNUIDTR200_Paint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
-        Dim myGraphics As Graphics = Me.CreateGraphics
-        Dim myPen As Pen
-        myPen = New Pen(Drawing.Color.Black, 1)
-        'Paint frame 1
-        myGraphics.DrawRectangle(myPen, 20, 70, 1307, 403)
-        'Paint frame 2
-        myGraphics.DrawRectangle(myPen, 20, 496, 1307, 153)
-    End Sub
     ''' <summary>
     ''' frmMNUIDTR200 Load
     ''' </summary>
@@ -48,32 +35,32 @@ Public Class frmMNUIDTR200
     ''' <remarks></remarks>
     Private Sub frmMNUIDTR200_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            p_mynoContext = New mynoEntities()
-            'Get record max set in config.ini
-            p_intNumItem = MNBTCMN100.GetConfig("MaxLine_Gridview_CompanyDataImport", "config.ini")
-            'Set title form
-            If p_strUserCdLogin <> Nothing Then
-                Me.Text = MNBTCMN100.SetTitleScreen()
-            End If
-            'Set data for dgvImportLog Have Paging
-            lblPage.Text = 0
-            Dim query As String = String.Empty
-            Dim numRecords As Integer = 0
-            dgvImportLog.DataSource = p_MNUIDTR200CTL.GetDataImportPaging(p_intNumItem, CInt(lblPage.Text), True, p_mynoContext, query, numRecords)
-            If dgvImportLog.DataSource IsNot Nothing Then
-                lblPage.Text = 1
-            End If
-            dgvImportLog.ClearSelection()
-            If p_intNumItem > 10 Then
-                dgvImportLog.Columns(1).Width = dgvImportLog.Columns(1).Width - 10
-            End If
-            Using transScope As DbContextTransaction = p_mynoContext.Database.BeginTransaction(IsolationLevel.Chaos)
-                'write system log
-                Dim seq As Integer = MNBTCMN100.InputLogMaster(p_mynoContext, 2, "MNUIDTR200", "", Nothing)
-                Dim message As String = "一覧検索 件数:" & numRecords.ToString("###,###,###") & " (" & query & ")"
-                MNBTCMN100.InputLogDetail(p_mynoContext, seq, "", message, "")
-                transScope.Commit()
-            End Using
+            'p_mynoContext = New MyNoEntities()
+            ''Get record max set in config.ini
+            'p_intNumItem = MNBTCMN100.GetConfig("MaxLine_Gridview_CompanyDataImport", "config.ini")
+            ''Set title form
+            'If p_strUserCdLogin <> Nothing Then
+            '    Me.Text = MNBTCMN100.SetTitleScreen()
+            'End If
+            ''Set data for dgvImportLog Have Paging
+            ''lblPage.Text = 0
+            'Dim query As String = String.Empty
+            'Dim numRecords As Integer = 0
+            'dgvImportLog.DataSource = p_MNUIDTR200CTL.GetDataImportPaging(p_intNumItem, CInt(lblPage.Text), True, p_mynoContext, query, numRecords)
+            'If dgvImportLog.DataSource IsNot Nothing Then
+            '    'lblPage.Text = 1
+            'End If
+            'dgvImportLog.ClearSelection()
+            'If p_intNumItem > 10 Then
+            '    dgvImportLog.Columns(1).Width = dgvImportLog.Columns(1).Width - 10
+            'End If
+            'Using transScope As DbContextTransaction = p_mynoContext.Database.BeginTransaction(IsolationLevel.Chaos)
+            '    'write system log
+            '    Dim seq As Integer = MNBTCMN100.InputLogMaster(p_mynoContext, 2, "MNUIDTR200", "", Nothing)
+            '    Dim message As String = "一覧検索 件数:" & numRecords.ToString("###,###,###") & " (" & query & ")"
+            '    MNBTCMN100.InputLogDetail(p_mynoContext, seq, "", message, "")
+            '    transScope.Commit()
+            'End Using
         Catch ex As Exception
             MNBTCMN100.ShowMessageException()
         End Try
@@ -86,25 +73,25 @@ Public Class frmMNUIDTR200
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub ChangePage(sender As Object, e As EventArgs) Handles btnPrevious.Click, btnNext.Click
-        p_mynoContext = New mynoEntities()
+    Private Sub ChangePage(sender As Object, e As EventArgs)
+        p_mynoContext = New MyNoEntities()
         Dim query As String = String.Empty
         Dim numRecords As Integer = 0
         Select Case sender.Tag
             Case 0
                 'Click button previous
-                If CInt(lblPage.Text) > 1 Then
-                    dgvImportLog.DataSource = p_MNUIDTR200CTL.GetDataImportPaging(p_intNumItem, CInt(lblPage.Text), False, p_mynoContext, query, numRecords)
-                    lblPage.Text = CInt(lblPage.Text) - 1
-                End If
+                'If CInt(lblPage.Text) > 1 Then
+                '    dgvImportLog.DataSource = p_MNUIDTR200CTL.GetDataImportPaging(p_intNumItem, CInt(lblPage.Text), False, p_mynoContext, query, numRecords)
+                '    lblPage.Text = CInt(lblPage.Text) - 1
+                'End If
             Case 1
                 'Click button next
                 If (dgvImportLog.RowCount = p_intNumItem) Then
-                    Dim obj As List(Of DataImportGridItem) = p_MNUIDTR200CTL.GetDataImportPaging(p_intNumItem, CInt(lblPage.Text), True, p_mynoContext, query, numRecords)
-                    If obj IsNot Nothing And obj.Count > 0 Then
-                        dgvImportLog.DataSource = obj
-                        lblPage.Text = CInt(lblPage.Text) + 1
-                    End If
+                    'Dim obj As List(Of DataImportGridItem) = p_MNUIDTR200CTL.GetDataImportPaging(p_intNumItem, CInt(lblPage.Text), True, p_mynoContext, query, numRecords)
+                    'If obj IsNot Nothing And obj.Count > 0 Then
+                    '    dgvImportLog.DataSource = obj
+                    '    'lblPage.Text = CInt(lblPage.Text) + 1
+                    'End If
                 End If
         End Select
         dgvImportLog.ClearSelection()
@@ -115,7 +102,7 @@ Public Class frmMNUIDTR200
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub btnClose_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
     ''' <summary>
@@ -129,7 +116,7 @@ Public Class frmMNUIDTR200
         Dim dialog As New OpenFileDialog()
         'choose file
         dialog.InitialDirectory = oldUrlImport
-        dialog.Filter = "csv files (*.csv)|*.csv|CSV files (*CSV)|*.CSV"
+        dialog.Filter = "Excel files (*.xlsx)|*.xlsx|Excel files (*xlsx)|*.xlsx"
         dialog.RestoreDirectory = True
         If dialog.ShowDialog() = DialogResult.OK Then
             txtPathFile.Text = dialog.FileName
@@ -143,63 +130,109 @@ Public Class frmMNUIDTR200
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub btnImport_Click(sender As Object, e As EventArgs) Handles btnImport.Click
-        p_mynoContext = New mynoEntities()
+        p_mynoContext = New MyNoEntities()
         'Check validate path file input
         If p_MNUIDTR200CTL.ValidateInputImport(txtPathFile.Text) Then
             'Show message confirm process
-            If MNBTCMN100.ShowMessage("MSGVWI00001", "指定ファイルの取込", "実行", "") = DialogResult.OK Then
+            If MNBTCMN100.ShowMessage("MSGVWI00001", "file này không", "nhập", "") = DialogResult.OK Then
                 'Select OK button
-                'c_trd = New Thread(AddressOf frmLoading_Shown)
-                'c_trd.IsBackground = True
-                'c_trd.Start()
-                'frmLoading.ShowDialog()
-
-                AddHandler frmLoading.Shown, AddressOf frmLoading_Shown
+                strPathFile = txtPathFile.Text
+                c_trd = New Thread(AddressOf frmLoading_Shown)
+                c_trd.IsBackground = True
+                c_trd.Start()
                 frmLoading.ShowDialog()
-                RemoveHandler frmLoading.Shown, AddressOf frmLoading_Shown
+
+                'AddHandler frmLoading.Shown, AddressOf frmLoading_Shown
+                'frmLoading.ShowDialog()
+                'RemoveHandler frmLoading.Shown, AddressOf frmLoading_Shown
 
             End If
         End If
     End Sub
 
-    Private Sub frmLoading_Shown(sender As Object, e As EventArgs)
+    Private Function GetValueFromCell(cell As NPOI.SS.UserModel.ICell) As String
+        Select Case cell.CellType
+            Case NPOI.SS.UserModel.CellType.Numeric
+                Return CStr(cell.NumericCellValue)
+            Case NPOI.SS.UserModel.CellType.String
+                Return cell.StringCellValue
+            Case Else
+                Return ""
+        End Select        
+        Return ""
+    End Function
+
+    Private Sub frmLoading_Shown()
+        'Try
+
+        'Open book here
         Try
-            Application.DoEvents()
-            Cursor.Current = Cursors.WaitCursor
-            Dim checkCountItem As Boolean = True
-            '基礎データの項目数を超える場合
-            Using myReader As New Microsoft.VisualBasic.FileIO.TextFieldParser(txtPathFile.Text)
-                'Specify that reading from a comma-delimited file'
-                myReader.TextFieldType = FileIO.FieldType.Delimited
-                myReader.SetDelimiters(",")
-                Dim currentRow As String()
-                If Not myReader.EndOfData Then
-                    currentRow = myReader.ReadFields()
-                    'Check data coloum in file csv
-                    If (currentRow.Count() <> 30) Then
-                        checkCountItem = False
-                        Me.BeginInvoke(New Action(Sub()
-                                                      frmLoading.Hide()
-                                                      Me.Activate()
-                                                      MNBTCMN100.ShowMessage("MSGVWE00020", "", "", "")
-                                                  End Sub))
-                    End If
-                End If
+            Dim wb2 As XSSFWorkbook = Nothing
+            Using fs As New FileStream(strPathFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+                wb2 = New XSSFWorkbook(fs)
             End Using
-            If checkCountItem Then
-                'Read file csv, check error csv, If error perform insert log and show message, else insert data to DB
-                If p_MNUIDTR200CTL.ProcessImportCompany(txtPathFile.Text) Then
-                    MNBTCMN100.ShowMessage("MSGVWI00003", "企業情報", "取込", "")
+
+            'Get sheet by the name
+            Dim sht1 As XSSFSheet = wb2.GetSheet("Sheet1")
+            Dim rowCopy As Integer = 0
+            Dim db As New MyNoEntities
+            Dim bienap As t_bienap
+            Dim bienapimport As t_bienapimport
+            Dim TenLo As String = ""
+            For row As Integer = 2 To sht1.LastRowNum - 1
+                bienap = New t_bienap
+                bienapimport = New t_bienapimport
+                If GetValueFromCell(sht1.GetRow(row).GetCell(0)).StartsWith("Lộ") Then
+                    TenLo = GetValueFromCell(sht1.GetRow(row).GetCell(0))
+                Else
+                    bienap.somay = GetValueFromCell(sht1.GetRow(row).GetCell(15))
+                    'bienap.ngaycapnhat = DateCreate
+                    db.t_bienap.Add(bienap)
                 End If
-            End If
-            'Loading form again
-            frmMNUIDTR200_Load(sender, e)
-            txtPathFile.Text = String.Empty
-            Cursor.Current = Cursors.Default
+            Next
+            db.SaveChanges()
         Catch ex As Exception
-            Cursor.Current = Cursors.Default
-            MNBTCMN100.ShowMessageException()
+            Me.BeginInvoke(New Action(Sub()
+                                          frmLoading.Hide()
+                                          MNBTCMN100.ShowMessageException()
+                                      End Sub))
+
         End Try
+
+        'Application.DoEvents()
+        'Cursor.Current = Cursors.WaitCursor
+        'Dim checkCountItem As Boolean = True
+        ''基礎データの項目数を超える場合
+        'Using myReader As New Microsoft.VisualBasic.FileIO.TextFieldParser(txtPathFile.Text)
+        '    'Specify that reading from a comma-delimited file'
+        '    myReader.TextFieldType = FileIO.FieldType.Delimited
+        '    myReader.SetDelimiters(",")
+        '    Dim currentRow As String()
+        '    If Not myReader.EndOfData Then
+        '        currentRow = myReader.ReadFields()
+        '        'Check data coloum in file csv
+        '        If (currentRow.Count() <> 30) Then
+        '            checkCountItem = False
+        '            frmLoading.Hide()
+        '            Me.Activate()
+        '            MNBTCMN100.ShowMessage("MSGVWE00020", "", "", "")
+        '        End If
+        '    End If
+        'End Using
+        'If checkCountItem Then
+        '    'Read file csv, check error csv, If error perform insert log and show message, else insert data to DB
+        '    If p_MNUIDTR200CTL.ProcessImportCompany(txtPathFile.Text) Then
+        '        MNBTCMN100.ShowMessage("MSGVWI00003", "企業情報", "取込", "")
+        '    End If
+        'End If
+        ''Loading form again
+        ''frmMNUIDTR200_Load(sender, e)
+        'txtPathFile.Text = String.Empty
+        'Cursor.Current = Cursors.Default
+        'Catch ex As Exception
+        '    Cursor.Current = Cursors.Default
+        '    MNBTCMN100.ShowMessageException()
+        'End Try
     End Sub
     ''' <summary>
     ''' Clear condition export
@@ -207,11 +240,11 @@ Public Class frmMNUIDTR200
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        txtCompanyCd.Text = String.Empty
-        txtBranchCd.Text = String.Empty
-        txtBranchStart.Text = String.Empty
-        txtBranchEnd.Text = String.Empty
+    Private Sub btnClear_Click(sender As Object, e As EventArgs)
+        'txtCompanyCd.Text = String.Empty
+        'txtBranchCd.Text = String.Empty
+        'txtBranchStart.Text = String.Empty
+        'txtBranchEnd.Text = String.Empty
     End Sub
     ''' <summary>
     ''' Cell click
@@ -222,7 +255,7 @@ Public Class frmMNUIDTR200
     Private Sub dgvImportLog_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvImportLog.CellClick
         Dim rowIndex As Integer = e.RowIndex
         Dim index As Integer = e.ColumnIndex
-        p_mynoContext = New mynoEntities()
+        p_mynoContext = New MyNoEntities()
         If rowIndex <> -1 Then
             If index = 3 Then
                 Dim lnkDowloadCsv As String
@@ -281,42 +314,42 @@ Public Class frmMNUIDTR200
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
-        p_mynoContext = New mynoEntities()
-        'Check validate
-        If p_MNUIDTR200CTL.ValidateExport(txtCompanyCd.Text, txtBranchCd.Text, txtBranchStart.Text, txtBranchEnd.Text) Then
-            'Show message confirm
-            If MNBTCMN100.ShowMessage("MSGVWI00001", "企業情報エクスポート", "実行", "") = DialogResult.OK Then
-                frmLoading.Show()
-                Application.DoEvents()
-                If p_MNUIDTR200CTL.ExportCsv(txtCompanyCd.Text, txtBranchCd.Text, txtBranchStart.Text, txtBranchEnd.Text) Then
-                    frmLoading.Close()
-                    MNBTCMN100.ShowMessage("MSGVWI00003", "企業情報", "出力", "")
-                End If
-            End If
-        End If
+    Private Sub btnExport_Click(sender As Object, e As EventArgs)
+        'p_mynoContext = New MyNoEntities()
+        ''Check validate
+        'If p_MNUIDTR200CTL.ValidateExport(txtCompanyCd.Text, txtBranchCd.Text, txtBranchStart.Text, txtBranchEnd.Text) Then
+        '    'Show message confirm
+        '    If MNBTCMN100.ShowMessage("MSGVWI00001", "企業情報エクスポート", "実行", "") = DialogResult.OK Then
+        '        frmLoading.Show()
+        '        Application.DoEvents()
+        '        If p_MNUIDTR200CTL.ExportCsv(txtCompanyCd.Text, txtBranchCd.Text, txtBranchStart.Text, txtBranchEnd.Text) Then
+        '            frmLoading.Close()
+        '            MNBTCMN100.ShowMessage("MSGVWI00003", "企業情報", "出力", "")
+        '        End If
+        '    End If
+        'End If
     End Sub
 
-    Private Sub txtInput_TextChanged(sender As Object, e As EventArgs) Handles txtCompanyCd.TextChanged, txtBranchCd.TextChanged, txtBranchEnd.TextChanged, txtBranchStart.TextChanged
+    Private Sub txtInput_TextChanged(sender As Object, e As EventArgs)
         If sender.Text.ToString.Equals("") Then
             Return
         End If
         Dim isValid = MNBTCMN100.CheckValidAlphanumeric(sender.Text)
         Try
             If isValid = True Then
-                RemoveHandler txtCompanyCd.TextChanged, AddressOf Me.txtInput_TextChanged
-                RemoveHandler txtBranchCd.TextChanged, AddressOf Me.txtInput_TextChanged
-                sender.Text = c_strTextBefore
-                sender.SelectionStart = c_strTextSelection
-                AddHandler txtCompanyCd.TextChanged, AddressOf Me.txtInput_TextChanged
-                AddHandler txtBranchCd.TextChanged, AddressOf Me.txtInput_TextChanged
+                'RemoveHandler txtCompanyCd.TextChanged, AddressOf Me.txtInput_TextChanged
+                'RemoveHandler txtBranchCd.TextChanged, AddressOf Me.txtInput_TextChanged
+                'sender.Text = c_strTextBefore
+                'sender.SelectionStart = c_strTextSelection
+                'AddHandler txtCompanyCd.TextChanged, AddressOf Me.txtInput_TextChanged
+                'AddHandler txtBranchCd.TextChanged, AddressOf Me.txtInput_TextChanged
             End If
         Catch ex As Exception
             sender.Text = ""
         End Try
     End Sub
 
-    Private Sub txtInput_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCompanyCd.KeyDown, txtBranchCd.KeyDown, txtPathFile.KeyDown, txtBranchEnd.KeyDown, txtBranchStart.KeyDown
+    Private Sub txtInput_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPathFile.KeyDown
         c_strTextBefore = sender.Text
         c_strTextSelection = sender.SelectionStart()
     End Sub

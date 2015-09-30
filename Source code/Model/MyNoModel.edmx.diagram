@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3e101cae6d6441c7a15c7f6d8c3913a9" Name="Diagram1">
+      <Diagram DiagramId="4989152c6b9e4911b1ef6087bfa0065c" Name="Diagram1">
         <EntityTypeShape EntityType="MyNoModel.m_app" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MyNoModel.m_appxauth" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MyNoModel.m_authority" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />

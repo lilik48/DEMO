@@ -16,9 +16,8 @@ Partial Public Class t_bienapimport
     Public Property nguoinhap As String
     Public Property tenfile As String
     Public Property delflg As Nullable(Of Integer)
-    Public Property deldatetime As Nullable(Of System.TimeSpan)
-    Public Property adddatetime As Nullable(Of System.TimeSpan)
     Public Property nguoithem As String
     Public Property exceldata As Byte()
+    Public Property ngayupdate As Nullable(Of Date)
 
 End Class
