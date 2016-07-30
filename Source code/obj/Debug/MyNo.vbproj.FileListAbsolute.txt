@@ -110,3 +110,7 @@ E:\Project\Github\Demo\DEMO\Source code\obj\Debug\EVNIMP.exe.licenses
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\EVNIMP.exe
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\EVNIMP.xml
 E:\Project\Github\Demo\DEMO\Source code\obj\Debug\EVNIMP.pdb
+D:\linhtinh\DEMO\Source code\bin\Debug\EVNIMP.exe.config
+D:\linhtinh\DEMO\Source code\obj\Debug\EVNIMP.exe
+D:\linhtinh\DEMO\Source code\obj\Debug\EVNIMP.xml
+D:\linhtinh\DEMO\Source code\obj\Debug\EVNIMP.pdb
