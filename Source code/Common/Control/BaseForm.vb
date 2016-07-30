@@ -28,6 +28,11 @@ Public Class BaseForm
     Public m_ctlFocus As Control
     Private m_CloseByEscapeKey As Boolean
 
+    ''' <summary>
+    ''' Ham load form
+    ''' </summary>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Protected Overrides Sub OnLoad(e As EventArgs)
         MyBase.OnLoad(e)
 
