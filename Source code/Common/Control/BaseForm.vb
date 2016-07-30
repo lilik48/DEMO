@@ -22,6 +22,8 @@ Public Class BaseForm
     Public TantouCd As String
     '2008/04/25 追加開始 古川 ESCAPEキーによるクローズ制御
 
+
+    'Test commit
     'ThongTH Set focus for control textbox
     Public m_ctlFocus As Control
     Private m_CloseByEscapeKey As Boolean
